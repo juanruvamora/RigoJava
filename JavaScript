@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto Rigo</title>
+</head>
+
+<body>
+   <h5>Rigo Clases</h5> 
+   <input type="text" id="email" placeholder="email"> 
+   <input type="text" id="contra" placeholder="contra"> 
+   <button onclick="registrar()">boton para el if else</button>
+   <hr>
+    <input type="text" id="escribe" placeholder="escribre">
+    <p>escribe perro, gato o leon</p>
+  
+  <div id="texto"></div>
+  <button onclick="opciones()">boton para switch</button>
+  <hr>
+
+  <button onclick="opciones()">boton para for</button>
+
+   <script >
+    function registrar() { 
+       if (document.getElementById("email").value != ""){
+           document.getElementById("texto").innerHTML = "Registro correcto";
+    }else {document.getElementById("texto").innerHTML = "Escribe tu correo";
+
+    }
+    
+
+    }
+    function opciones(){
+
+    switch(document.getElementById("escribe").value) {
+    case "perro":
+    document.getElementById("texto").innerHTML = "Eres un perro";
+        break;
+    case "gato":
+    document.getElementById("texto").innerHTML = "Eres un gato";
+        break;
+    default:
+    document.getElementById("texto").innerHTML = "Eres un leon";
+}
+
+
+var i;
+var mianimal = [];
+mianimal[0] = "perro";
+mianimal[1] = "gato";
+mianimal[2] = "leon";
+
+for (i=0;i<mianimal.length;i++)
+{
+    document.getElementById("texto").innerHTML = mianimal[i] ;
+}
+    }
+
+   
+
+</script>
+</body>
+</html>
